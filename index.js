@@ -1,2 +1,2 @@
 var x = 20;
-alert("경고")
+alert("경고" + x)
