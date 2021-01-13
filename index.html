@@ -1,17 +1,99 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link type="stylesheet" rel="text/css" src="index.css">
-        <script src="index.js"></script>
-    </head>
-    <body>
-        <h1>자바스크립트 연습하기</h1>
-        <p id="result"></p>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GNU CLUB</title>
+    <!--fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  </head>
+  <body>
+        <!--상단바-->
+        <nav class="status-bar">
+          <a href="index.html" class="status-bar__logo">
+            <span>GNU CLUB</span>
+          </a>
+          <div class="status-bar__right">
+            <div class=status-bar__menu>
+              <button class="status-bar__btn">소개</button>
+                <div class="status-bar__content">
+                  <a href="information/information.html">인사말</a>
+                </div>
+            </div>
+            <div class=status-bar__menu>
+              <button class="status-bar__btn">동아리 분과</button> 
+                <div class="status-bar__content">
+                  <a href="category/cate_festival.html">공연 분과</a>
+                  <a href="category/cate_global.html">국제 분과</a>
+                  <a href="category/cate_paint.html">그림 분과</a>
+                  <a href="category/cate_martial.html">무예 분과</a>
+                  <a href="category/cate_literature.html">문학 분과</a>
+                  <a href="category/cate_volunteer.html">봉사 분과</a>
+                  <a href="category/cate_culture.html">생활 분과</a>
+                  <a href="category/cate_language.html">외국어 분과</a>
+                  <a href="category/cate_religion.html">종교 분과</a>
+                  <a href="category/cate_startup.html">창업 분과</a>
+                  <a href="category/cate_physical.html">체육 분과</a>
+                  <a href="category/cate_education.html">학술 분과</a>
+                </div>
+            </div>   
+          </div>
+        </nav>
+        <!--Header-->
+        <header class="header">
+          <div>
+            <p class="header__sub">경상대학교 동아리를 소개합니다 :)</p>
+          </div>
+          <div>
+            <p class="header__title">GNU CLUB</p>
+          </div>
+          <div class="header__search">
+            <i class="fas fa-search"></i>
+            <div class="search__text">
+              <select name="clubs__list" id="clubs__list" class="search__text" style="align-self: center;">
+                <option id="0" value="0">원하는 분과를 선택하세요 !</option>
+                <option id="0" value="1">공연분과</option>
+                <option id="0" value="2">국제분과</option>
+                <option id="0" value="3">그림분과</option>
+                <option id="0" value="4">무예분과</option>
+                <option id="0" value="5">문학분과</option>
+                <option id="0" value="6">봉사분과</option>
+                <option id="0" value="7">생활분과</option>
+                <option id="0" value="8">외국어분과</option>
+                <option id="0" value="9">종교분과</option>
+                <option id="0" value="10">창업분과</option>
+                <option id="0" value="11">체육분과</option>
+                <option id="0" value="12">학술분과</option>
+              </select>
+            </div>
+            <div class="search__button">
+              <input type="button" class="search__button" name="button" onclick="movePage()" value="검색"  id="search"></input>
+            </div>
+          </div>
+        </header>
         <script>
-            var x = 20;
-            document.getElementById("result").innerHTML = x;
+          function movePage() {
+            var selectOption = $("select[name=clubs__list]").val();
+            // console.log($("select[name=clubs__list]").val()); //value값 가져오기
+            // console.log($("select[name=clubs__list] option:selected").text()); //text값 가져오기
+            if (selectOption == 0) alert("분과를 선택해주세요 !");
+            if (selectOption == 1) location.href = "category/cate_festival.html";
+            if (selectOption == 2) location.href = "category/cate_global.html";
+            if (selectOption == 3) location.href = "category/cate_paint.html";
+            if (selectOption == 4) location.href = "category/cate_martial.html";
+            if (selectOption == 5) location.href = "category/cate_literature.html";
+            if (selectOption == 6) location.href = "category/cate_volunteer.html";
+            if (selectOption == 7) location.href = "category/cate_culture.html";
+            if (selectOption == 8) location.href = "category/cate_language.html";
+            if (selectOption == 9) location.href = "category/cate_religion.html";
+            if (selectOption == 10) location.href = "category/cate_startup.html";
+            if (selectOption == 11) location.href = "category/cate_physical.html";
+            if (selectOption == 12) location.href = "category/cate_education.html";
+          }
         </script>
-        <p>테스트1</p>
-        <h>안녕하세요</h>
-    </body>
+  </body>
 </html>

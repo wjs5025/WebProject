@@ -1,0 +1,178 @@
+      /* 전체 설정 */ 
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap');
+      @font-face {
+        font-family: "NEXON Lv2 Gothic";
+        src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;}
+      
+      html{
+        height: 100%;
+        width: 100%;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;}
+      
+      body {
+        overflow: hidden;
+        margin:0;
+        padding:0;
+        height: 100%;
+        width: 100%;
+        background-image: linear-gradient(rgba(225, 225, 225, 0.4), rgba(225, 225, 225, 0.4)), url("picture/gnu.jpeg");
+                        /* linear-gradient(rgba(0, 0, 0, 0.1), rgb(255, 255, 255))*/
+          background-size: 100% 100%; 
+          background-position: center;
+        padding-top: 60px;
+        font-family: "NEXON Lv2 Gothic";
+        background-color: #fff}
+      
+      /* 상단 바 */
+      .status-bar__logo {
+          font-family: "Montserrat";
+          margin-left: 20px;
+          font-weight: 600;
+          font-style: italic;
+          color:white;
+          text-decoration:none;}
+      
+      .status-bar {
+          height: 60px;
+          display: flex;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          justify-content: space-between;
+          background-color: #2a294b;
+          align-items: center;
+          font-size: 30px;}
+      
+      .status-bar__btn{
+          background-color:#2a294b;
+          color:white;
+          padding: 13px;
+          font-size:20px;
+          border:none;
+          min-width:130px;
+          height:60px;
+          font-family: "NEXON Lv2 Gothic";}
+      
+      .status-bar__right{
+          margin-right:30px;
+      }
+      .status-bar__menu{
+          position: relative;
+          display: inline-block;
+      }
+      
+      .status-bar__content {
+          display: none;
+          position: absolute;
+          background-color: #2a294b;
+          min-width: 130px;
+          font-size:15px;
+          text-align:center;
+          text-decoration:none;
+          color:white;
+        }
+        
+        .status-bar__content a {
+          color: white;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+        .status-bar__menu:hover .status-bar__btn{
+          background-color:  #2a294b;
+          color:rgb(247, 235, 169);}
+        .status-bar__content a:hover {
+          background-color:#ffffff;
+          color:black;
+          font-weight:bold;}
+        .status-bar__menu:hover .status-bar__content {
+            display: block;}
+      
+      /* Header */
+      .header {
+          color: white;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          height: 100%;
+          font-size: 30px;
+          
+        }
+        .header__sub {
+           margin-top:130px;
+        }        
+        .header__title {
+          margin-top: -15px;
+          font-size: 60px;
+          font-family: "Montserrat";
+          font-weight: 600;
+        }
+        
+        
+        .header__search {
+          border: 2px solid #2a294b;
+          border-radius: 40px;
+          width: 600px;
+          height: 50px;
+          display: flex;
+          justify-content: space-around;
+          background-color: white;
+          margin-top: 30px;
+        }
+        
+        .header__search i {
+          margin-top: 10px;
+          margin-left: 20px;
+          color: #cbcbcb;}
+        
+        .header__search .search__text {
+          margin-top:2.5px;
+          width: 350px;
+          height: 40px;
+          border: none;
+          font-size: 18px;}
+        
+        .header__search .search__button {
+          width: 150px;
+          height: 50px;
+          border-radius: 40px;
+          margin-right: -20px;
+          margin-top: -1.8px;
+          border: 2px solid #2a294b;
+          font-size: 20px;
+          background-color: #2a294b;
+          color: white;}
+        
+        input:focus { 
+          outline: none; 
+        }
+        
+        /* 검색바 구현 */
+        fieldset#search {
+            margin-top:90px; 
+            border:none; 
+            padding-bottom: 50px;}
+        form.search {
+            position:static; 
+            margin:10px auto; 
+            color:white; 
+            text-align: center;}
+        form.search input {
+            padding:15px;
+            border:none;}
+        form.search input[type=text] {
+            margin-top:10px; 
+            padding:16.5px; 
+            background-color: white; 
+            width: 340px; 
+            border-radius:25px 0px 0px 25px;}
+        form.search input[type=submit] {
+            background-color: orange; 
+            width:120px; 
+            border-radius: 0px 25px 25px 0px;}
